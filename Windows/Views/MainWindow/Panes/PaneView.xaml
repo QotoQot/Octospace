@@ -1,0 +1,48 @@
+﻿<views:PaneViewAbstract xmlns:views="using:Win.Views.MainWindow"
+    x:Class="Win.Views.MainWindow.PaneView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:fluent="using:Fluent.Icons"
+    mc:Ignorable="d">
+    
+    <!--<muxc:TabView x:Name="_tabView"
+                  TabItemsSource="{x:Bind myDatas, Mode=OneWay}" 
+                  AddTabButtonClick="TabViewItemsSourceSample_AddTabButtonClick"
+                  TabCloseRequested="TabViewItemsSourceSample_TabCloseRequested">
+        
+    </muxc:TabView>-->
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="PaneTabViewStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <views:PaneTabView x:Name="_tabView"
+                  TabWidthMode="SizeToContent"
+                  CloseButtonOverlayMode="OnPointerOver"
+                  IsAddTabButtonVisible="False">
+        <!--<muxc:TabView.TabItems>
+            <muxc:TabViewItem Header="Document 0">
+                <muxc:TabViewItem.IconSource>
+                    <muxc:SymbolIconSource Symbol="Placeholder" />
+                </muxc:TabViewItem.IconSource>
+            </muxc:TabViewItem>
+            <muxc:TabViewItem Header="Document 1">
+                <muxc:TabViewItem.IconSource>
+                    <muxc:SymbolIconSource Symbol="Placeholder" />
+                </muxc:TabViewItem.IconSource>
+            </muxc:TabViewItem>
+            <muxc:TabViewItem Header="Doc 2">
+                <muxc:TabViewItem.IconSource>
+                    <muxc:SymbolIconSource Symbol="Placeholder" />
+                </muxc:TabViewItem.IconSource>
+            </muxc:TabViewItem>
+        </muxc:TabView.TabItems>-->
+    </views:PaneTabView>
+</views:PaneViewAbstract>

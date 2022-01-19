@@ -1,0 +1,38 @@
+﻿<views:SettingsThemesViewAbstract xmlns:views="using:Win.Views.Settings"
+    x:Class="Win.Views.Settings.SettingsThemesView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Win.Views.Settings"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mvx="using:MvvmCross.Platforms.Uap.Binding"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <views:SettingsThemesViewAbstract.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="SettingsStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </views:SettingsThemesViewAbstract.Resources>
+
+    <ScrollViewer Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" VerticalScrollBarVisibility="Auto">
+        <ContentControl>
+            <StackPanel MaxWidth="{StaticResource SettingsStackPanelMaxWidth}">
+                <StackPanel Style="{StaticResource SettingsSectionStackPanelStyle}">
+                    <ComboBox Width="{StaticResource SettingsComboBoxWidth}"
+                              mvx:Bi.nd="Header ColorModeLabel;
+                                         ItemsSource ColorModeNames;
+                                         SelectedIndex SelectedColorModeIndex, Mode=TwoWay"/>
+                    <CheckBox mvx:Bi.nd="Content ContentThemesFollowAppThemesLabel;
+                                         IsChecked ContentThemesFollowAppThemes"/>
+                </StackPanel>
+
+                <StackPanel Style="{StaticResource SettingsSectionStackPanelStyle}">
+                    
+                </StackPanel>
+            </StackPanel>
+        </ContentControl>
+    </ScrollViewer>
+</views:SettingsThemesViewAbstract>

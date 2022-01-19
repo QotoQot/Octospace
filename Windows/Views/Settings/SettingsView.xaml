@@ -1,0 +1,28 @@
+﻿<views:SettingsViewAbstract xmlns:views="using:Win.Views.Settings"
+    x:Class="Win.Views.Settings.SettingsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:core="using:Core.ViewModels.Settings"
+    mc:Ignorable="d">
+
+    <views:SettingsViewAbstract.Resources>
+        <DataTemplate x:Key="ItemTemplate" x:DataType="core:SettingsSectionViewModel">
+            <muxc:NavigationViewItem Content="{x:Bind Title}"/>
+        </DataTemplate>
+    </views:SettingsViewAbstract.Resources>
+
+    <muxc:NavigationView x:Name="_navigationView"
+                         PaneTitle="Settings"
+                         Margin="0,50,0,0"
+                         PaneDisplayMode="Top"
+                         IsBackButtonVisible="Collapsed"
+                         IsSettingsVisible="False"
+                         SelectionChanged="NavigationView_SelectionChanged"
+                         MenuItemTemplate="{StaticResource ItemTemplate}">
+        <Frame x:Name="_contentFrame"/>
+    </muxc:NavigationView>
+    
+</views:SettingsViewAbstract>

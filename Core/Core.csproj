@@ -1,0 +1,134 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <LangVersion>9.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <NullableContextOptions>enable</NullableContextOptions>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>9.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <NullableContextOptions>enable</NullableContextOptions>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Model\Services\Outbound\**" />
+    <EmbeddedResource Remove="Model\Services\Outbound\**" />
+    <None Remove="Model\Services\Outbound\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MvvmCross" Version="8.0.2" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="MvvmCross.Plugin.Messenger" Version="8.0.2" />
+    <PackageReference Include="Hashids.net" Version="1.4.1" />
+    <PackageReference Include="CSharpFunctionalExtensions" Version="2.27.1" />
+    <PackageReference Include="Microsoft.Toolkit.Diagnostics" Version="7.1.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Markdig" Version="0.26.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Basics\" />
+    <Folder Include="Model\Services\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\Localization\" />
+    <Folder Include="ViewModels\MainWindow\" />
+    <Folder Include="Model\Services\Inbound\" />
+    <Folder Include="Model\Services\Navigation\" />
+    <Folder Include="Model\Services\Storage\" />
+    <Folder Include="Model\Import\" />
+    <Folder Include="Model\Import\Databases\" />
+    <Folder Include="Model\Services\Global\" />
+    <Folder Include="ViewModels\Content\Graphs\" />
+    <Folder Include="Model\Content\" />
+    <Folder Include="ViewModels\MainWindow\Tabs\" />
+    <Folder Include="MvvmCross\" />
+    <Folder Include="ViewModels\MainWindow\Sidebar\" />
+    <Folder Include="Model\Services\Storage\Clouds\" />
+    <Folder Include="Model\Content\Documents\" />
+    <Folder Include="Model\Content\Documents\Pages\" />
+    <Folder Include="Model\Content\Documents\Spaces\" />
+    <Folder Include="Model\Content\Documents\Elements\" />
+    <Folder Include="Model\Services\Documents\" />
+    <Folder Include="Basics\Utils\" />
+    <Folder Include="Model\Content\Documents\Blocks\" />
+    <Folder Include="ViewModels\Content\Documents\Pages\" />
+    <Folder Include="ViewModels\Content\Documents\Spaces\" />
+    <Folder Include="Resources\Fonts\" />
+    <Folder Include="MvvmCross\Converters\" />
+    <Folder Include="Model\Services\Documents\Markdown\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove=".DS_Store" />
+    <None Remove="Serilog" />
+    <None Remove="Serilog.Extensions.Logging" />
+    <None Remove="Model\Content\Documents\" />
+    <None Remove="Model\Content\Documents\Enums\" />
+    <None Remove="Model\Content\Documents\Pages\" />
+    <None Remove="Model\Content\Documents\Spaces\" />
+    <None Remove="Model\Content\Documents\Shared\" />
+    <None Remove="Model\Content\Documents\Common\" />
+    <None Remove="Model\Services\Documents\" />
+    <None Remove="Basics\Utils\" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="ViewModels\Content\Elements\" />
+    <None Remove="Model\Content\Documents\Blocks\" />
+    <None Remove="ViewModels\Content\Documents\" />
+    <None Remove="ViewModels\Content\Documents\Blocks\" />
+    <None Remove="ViewModels\Content\Documents\Pages\" />
+    <None Remove="ViewModels\Content\Documents\Spaces\" />
+    <None Remove="Model\State\" />
+    <None Remove="NLog" />
+    <None Remove="NLog.Extensions.Logging" />
+    <None Remove="Resources\Fonts\" />
+    <None Remove="MvvmCross\Converters\" />
+    <None Remove="Markdig" />
+    <None Remove="Model\Services\Documents\Markdown\" />
+    <None Remove="Resources\TestPage.md" />
+    <None Remove="Resources\TestPage.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\TestPage.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Localization\SharedStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SharedStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\SettingsStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SettingsStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\MainWindowStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainWindowStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Localization\ContentStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContentStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\Localization\SharedStrings.Designer.cs">
+      <DependentUpon>SharedStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Localization\SettingsStrings.Designer.cs">
+      <DependentUpon>SettingsStrings.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\Localization\MainWindowStrings.Designer.cs">
+      <DependentUpon>MainWindowStrings.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\Localization\ContentStrings.Designer.cs">
+      <DependentUpon>ContentStrings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

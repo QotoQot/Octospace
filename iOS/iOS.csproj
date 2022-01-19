@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+        <ProjectGuid>{D74ACBC2-2422-48FB-A4A9-53D644E53155}</ProjectGuid>
+        <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <TemplateGuid>{edc1b0fa-90cd-4038-8fad-98fe74adb368}</TemplateGuid>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>iOS</RootNamespace>
+        <AssemblyName>iOS</AssemblyName>
+        <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+        <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+        <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+        <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+        <DefineConstants>DEBUG</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchArch>x86_64</MtouchArch>
+        <MtouchLink>None</MtouchLink>
+        <MtouchDebug>true</MtouchDebug>
+        <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+        <CodesignKey>iPhone Developer: Ivan Miroshnichenko (8YMX76M2XL)</CodesignKey>
+        <CodesignProvision>VS: WildCard Development</CodesignProvision>
+        <LangVersion>9.0</LangVersion>
+        <Nullable>enable</Nullable>
+        <NullableContextOptions>enable</NullableContextOptions>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchLink>None</MtouchLink>
+        <MtouchArch>x86_64</MtouchArch>
+        <CodesignKey>iPhone Developer: Ivan Miroshnichenko (8YMX76M2XL)</CodesignKey>
+        <CodesignProvision>VS: WildCard Development</CodesignProvision>
+        <LangVersion>9.0</LangVersion>
+        <Nullable>enable</Nullable>
+        <NullableContextOptions>enable</NullableContextOptions>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\iPhone\Debug</OutputPath>
+        <DefineConstants>DEBUG</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchArch>ARM64</MtouchArch>
+        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+        <CodesignKey>Apple Development: Ivan Miroshnichenko (8YMX76M2XL)</CodesignKey>
+        <MtouchDebug>true</MtouchDebug>
+        <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+        <MtouchLink>SdkOnly</MtouchLink>
+        <LangVersion>9.0</LangVersion>
+        <Nullable>enable</Nullable>
+        <NullableContextOptions>enable</NullableContextOptions>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\iPhone\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+        <MtouchArch>ARM64</MtouchArch>
+        <CodesignKey>iPhone Developer: Ivan Miroshnichenko (8YMX76M2XL)</CodesignKey>
+        <CodesignProvision>VS: WildCard Development</CodesignProvision>
+        <MtouchLink>SdkOnly</MtouchLink>
+        <LangVersion>9.0</LangVersion>
+        <Nullable>enable</Nullable>
+        <NullableContextOptions>enable</NullableContextOptions>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Core" />
+        <Reference Include="Xamarin.iOS" />
+        <Reference Include="System.Numerics" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+      <PackageReference Include="MvvmCross">
+        <Version>8.0.2</Version>
+      </PackageReference>
+      <PackageReference Include="MvvmCross.Plugin.Messenger">
+        <Version>8.0.2</Version>
+      </PackageReference>
+      <PackageReference Include="CSharpFunctionalExtensions">
+        <Version>2.27.1</Version>
+      </PackageReference>
+      <PackageReference Include="Microsoft.Toolkit.Diagnostics">
+        <Version>7.1.2</Version>
+      </PackageReference>
+      <PackageReference Include="MvvmCross.Plugin.Visibility">
+        <Version>8.0.2</Version>
+      </PackageReference>
+      <PackageReference Include="MvvmCross.Plugin.Color">
+        <Version>8.0.2</Version>
+      </PackageReference>
+      <PackageReference Include="Markdig">
+        <Version>0.26.0</Version>
+      </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Resources\" />
+        <Folder Include="Basics\" />
+        <Folder Include="Views\" />
+        <Folder Include="MvvmCross\" />
+        <Folder Include="MvvmCross\Presenters\" />
+        <Folder Include="MvvmCross\Views\" />
+        <Folder Include="Views\Content\" />
+        <Folder Include="Views\MainWindow\" />
+        <Folder Include="Views\Settings\" />
+        <Folder Include="Views\Content\Pages\" />
+        <Folder Include="MvvmCross\Core\" />
+        <Folder Include="Platform\" />
+    </ItemGroup>
+    <ItemGroup>
+        <InterfaceDefinition Include="Basics\LaunchScreen.storyboard" />
+        <InterfaceDefinition Include="Views\Main.storyboard" />
+        <InterfaceDefinition Include="Views\MainWindow\PaneView.xib" />
+        <InterfaceDefinition Include="Views\MainWindow\SidebarView.xib" />
+        <InterfaceDefinition Include="Views\MainWindow\SingleTabView.xib" />
+        <InterfaceDefinition Include="Views\Settings\SettingsView.xib" />
+        <InterfaceDefinition Include="Views\Settings\SettingsTextView.xib" />
+        <InterfaceDefinition Include="Views\Settings\SettingsGeneralView.xib" />
+        <InterfaceDefinition Include="Views\Content\Pages\PageView.xib" />
+        <InterfaceDefinition Include="Views\MainWindow\DetailView.xib" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Info.plist" />
+        <None Include="Entitlements.plist" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Basics\LinkerPleaseInclude.cs" />
+        <Compile Include="Basics\AppDelegate.cs" />
+        <Compile Include="Basics\Main.cs" />
+        <Compile Include="Basics\Setup.cs" />
+        <Compile Include="MvvmCross\Presenters\IMvxIosViewDirector.cs" />
+        <Compile Include="MvvmCross\Presenters\MvxIosViewDirector.cs" />
+        <Compile Include="MvvmCross\Presenters\IMvxAltIosViewPresenter.cs" />
+        <Compile Include="Views\MainWindow\RootView.cs" />
+        <Compile Include="Views\MainWindow\RootView.designer.cs">
+          <DependentUpon>RootView.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Views\MainWindow\PaneView.cs" />
+        <Compile Include="Views\MainWindow\PaneView.designer.cs">
+          <DependentUpon>PaneView.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Views\MainWindow\SidebarView.cs" />
+        <Compile Include="Views\MainWindow\SidebarView.designer.cs">
+          <DependentUpon>SidebarView.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Views\MainWindow\SingleTabView.cs" />
+        <Compile Include="Views\MainWindow\SingleTabView.designer.cs">
+          <DependentUpon>SingleTabView.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Views\Settings\SettingsView.cs" />
+        <Compile Include="Views\Settings\SettingsView.designer.cs">
+          <DependentUpon>SettingsView.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Views\Settings\SettingsTextView.cs" />
+        <Compile Include="Views\Settings\SettingsTextView.designer.cs">
+          <DependentUpon>SettingsTextView.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Views\Settings\SettingsGeneralView.cs" />
+        <Compile Include="Views\Settings\SettingsGeneralView.designer.cs">
+          <DependentUpon>SettingsGeneralView.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Views\Content\Pages\PageView.cs" />
+        <Compile Include="Views\Content\Pages\PageView.designer.cs">
+          <DependentUpon>Views\Content\Pages\PageView.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Basics\SceneDelegate.cs" />
+        <Compile Include="MvvmCross\Views\MvxIosViewExtensions.cs" />
+        <Compile Include="MvvmCross\Presenters\MvxAltIosViewPresenter.cs" />
+        <Compile Include="MvvmCross\Core\MvxSceneDelegate.cs" />
+        <Compile Include="MvvmCross\Core\IMvxSceneDelegate.cs" />
+        <Compile Include="Views\MainWindow\DetailView.cs" />
+        <Compile Include="Views\MainWindow\DetailView.designer.cs">
+          <DependentUpon>DetailView.cs</DependentUpon>
+        </Compile>
+        <Compile Include="MvvmCross\Views\MvxCollectionViewController.cs" />
+        <Compile Include="MvvmCross\Views\MvxEventSourceCollectionViewController.cs" />
+        <Compile Include="Views\MainWindow\SidebarCollectionItem.cs" />
+        <Compile Include="Platform\NSWrapper.cs" />
+        <Compile Include="Platform\UiKitExtensions.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Core\Core.csproj">
+        <Project>{D4405C50-DF00-4A7D-B050-B6111F2AFB26}</Project>
+        <Name>Core</Name>
+      </ProjectReference>
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

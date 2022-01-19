@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DD54A60F-8752-47CB-8002-F1D77D9E678B}</ProjectGuid>
+    <ProjectTypeGuids>{A3F8F2AB-B479-4A4A-A458-A89E7DC349F1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Mac</RootNamespace>
+    <AssemblyName>Octospace</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>Xamarin.Mac</TargetFrameworkIdentifier>
+    <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CodeSigningKey>Mac Developer</CodeSigningKey>
+    <CreatePackage>false</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <UseSGen>true</UseSGen>
+    <UseRefCounting>true</UseRefCounting>
+    <HttpClientHandler>NSUrlSessionHandler</HttpClientHandler>
+    <LinkMode>None</LinkMode>
+    <XamMacArch>x86_64</XamMacArch>
+    <CodeSignResourceRules></CodeSignResourceRules>
+    <PackageSigningKey>3rd Party Mac Developer Installer</PackageSigningKey>
+    <AOTMode>None</AOTMode>
+    <LangVersion>9.0</LangVersion>
+    <NullableContextOptions>enable</NullableContextOptions>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CreatePackage>true</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>true</IncludeMonoRuntime>
+    <UseSGen>true</UseSGen>
+    <UseRefCounting>true</UseRefCounting>
+    <LinkMode>SdkOnly</LinkMode>
+    <HttpClientHandler></HttpClientHandler>
+    <XamMacArch></XamMacArch>
+    <AOTMode>None</AOTMode>
+    <LangVersion>9.0</LangVersion>
+    <NullableContextOptions>enable</NullableContextOptions>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.Mac" />
+    <Reference Include="Xamarin.Essentials">
+      <HintPath>..\packages\Xamarin.Essentials.1.7.0\lib\xamarinmac20\Xamarin.Essentials.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="OpenTK" />
+    <Reference Include="MvvmCross">
+      <HintPath>..\packages\MvvmCross.8.0.2\lib\xamarinmac20\MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugin.Messenger">
+      <HintPath>..\packages\MvvmCross.Plugin.Messenger.8.0.2\lib\netstandard2.0\MvvmCross.Plugin.Messenger.dll</HintPath>
+    </Reference>
+    <Reference Include="CSharpFunctionalExtensions">
+      <HintPath>..\packages\CSharpFunctionalExtensions.2.27.1\lib\netstandard2.0\CSharpFunctionalExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Toolkit.Diagnostics">
+      <HintPath>..\packages\Microsoft.Toolkit.Diagnostics.7.1.2\lib\netstandard2.1\Microsoft.Toolkit.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.6.0.0\lib\netstandard2.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.6.0.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options">
+      <HintPath>..\packages\Microsoft.Extensions.Options.6.0.0\lib\netstandard2.1\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.6.0.0\lib\netstandard2.1\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.ObjectPool">
+      <HintPath>..\packages\Microsoft.Extensions.ObjectPool.6.0.1\lib\netstandard2.0\Microsoft.Extensions.ObjectPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.6.0.0\lib\netstandard2.1\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\netstandard2.0\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugin.Color">
+      <HintPath>..\packages\MvvmCross.Plugin.Color.8.0.2\lib\xamarinmac20\MvvmCross.Plugin.Color.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard" />
+    <Reference Include="System.Drawing.Common.dll" />
+    <Reference Include="MvvmCross.Plugin.Visibility">
+      <HintPath>..\packages\MvvmCross.Plugin.Visibility.8.0.2\lib\xamarinmac20\MvvmCross.Plugin.Visibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="Markdig">
+      <HintPath>..\packages\Markdig.0.26.0\lib\netstandard2.1\Markdig.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-128.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-128%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-16.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-16%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-256.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-256%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-32.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-32%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-512.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-512%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Basics\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\MainWindow\" />
+    <Folder Include="MvvmCross\" />
+    <Folder Include="MvvmCross\Presenters\" />
+    <Folder Include="MvvmCross\Views\" />
+    <Folder Include="Views\Settings\" />
+    <Folder Include="Views\Content\" />
+    <Folder Include="Platform\" />
+    <Folder Include="Views\Content\Documents\" />
+    <Folder Include="Views\Content\Documents\Pages\" />
+    <Folder Include="Views\Content\Documents\Pages\Blocks\" />
+    <Folder Include="MvvmCross\Views\CollectionView\" />
+    <Folder Include="MvvmCross\Views\SplitView\" />
+    <Folder Include="MvvmCross\Views\TableView\" />
+    <Folder Include="Platform\Views\" />
+    <Folder Include="Platform\Utils\" />
+    <Folder Include="Views\Content\Documents\Blocks\" />
+    <Folder Include="Views\Content\Documents\Pages\Blocks\Elements\" />
+    <Folder Include="Views\MainWindow\Sidebar\" />
+    <Folder Include="MvvmCross\Bindings\" />
+    <Folder Include="Platform\Services\" />
+    <Folder Include="Platform\Services\Documents\" />
+    <Folder Include="Platform\Services\Documents\Markdown\" />
+    <Folder Include="Platform\Services\Documents\Markdown\Renderers\" />
+    <Folder Include="Platform\Services\Documents\Markdown\Renderers\Inlines\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Basics\AppDelegate.cs" />
+    <Compile Include="Basics\Main.cs" />
+    <Compile Include="Basics\Setup.cs" />
+    <Compile Include="Views\MainWindow\PaneView.cs" />
+    <Compile Include="Views\MainWindow\PaneView.designer.cs">
+      <DependentUpon>PaneView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow\RootView.cs" />
+    <Compile Include="Views\MainWindow\RootView.designer.cs">
+      <DependentUpon>RootView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MvvmCross\Presenters\Attributes\SheetPresentationAttribute.cs" />
+    <Compile Include="MvvmCross\Presenters\Attributes\UniqueWindowPresentationAttribute.cs" />
+    <Compile Include="MvvmCross\Presenters\Attributes\WindowPresentationAttribute.cs" />
+    <Compile Include="MvvmCross\Presenters\IMvxAltMacViewPresenter.cs" />
+    <Compile Include="MvvmCross\Presenters\MvxAltMacViewPresenter.cs" />
+    <Compile Include="MvvmCross\Views\MvxMacViewExtensions.cs" />
+    <Compile Include="Basics\AppDelegateMenuItems.cs" />
+    <Compile Include="Basics\AppDelegate.designer.cs">
+      <DependentUpon>Basics\AppDelegate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsView.cs" />
+    <Compile Include="Views\Settings\SettingsView.designer.cs">
+      <DependentUpon>SettingsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsGeneralView.cs" />
+    <Compile Include="Views\Settings\SettingsGeneralView.designer.cs">
+      <DependentUpon>SettingsGeneralView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsTextView.cs" />
+    <Compile Include="Views\Settings\SettingsTextView.designer.cs">
+      <DependentUpon>SettingsTextView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MvvmCross\Presenters\IMacViewDirector.cs" />
+    <Compile Include="MvvmCross\Presenters\MvxMacViewDirector.cs" />
+    <Compile Include="Views\MainWindow\SingleTabView.cs" />
+    <Compile Include="Views\MainWindow\SingleTabView.designer.cs">
+      <DependentUpon>SingleTabView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Content\TabContentView.cs" />
+    <Compile Include="Views\MainWindow\DetailView.cs" />
+    <Compile Include="Views\MainWindow\DetailView.designer.cs">
+      <DependentUpon>DetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Content\Documents\Pages\PageView.cs" />
+    <Compile Include="Views\Content\Documents\Pages\PageView.designer.cs">
+      <DependentUpon>..\..\Pages\PageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MvvmCross\Views\CollectionView\MvxCollectionViewItem.cs" />
+    <Compile Include="MvvmCross\Views\CollectionView\MvxCollectionViewItemAdapter.cs" />
+    <Compile Include="MvvmCross\Views\CollectionView\MvxEventSourceCollectionViewItem.cs" />
+    <Compile Include="MvvmCross\Views\SplitView\MvxEventSourceSplitViewController.cs" />
+    <Compile Include="MvvmCross\Views\SplitView\MvxSplitViewController.cs" />
+    <Compile Include="MvvmCross\Views\TableView\MvxTableCellView.cs" />
+    <Compile Include="Views\Content\Documents\Pages\Blocks\TextBlockTableCellView.cs" />
+    <Compile Include="Views\Content\Documents\Pages\Blocks\TextBlockTableCellView.designer.cs">
+      <DependentUpon>TextBlockTableCellView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow\RootToolbar.cs" />
+    <Compile Include="Views\Settings\SettingsToolbar.cs" />
+    <Compile Include="Platform\Views\ToolbarDelegate.cs" />
+    <Compile Include="Platform\Views\TransparentScroller.cs" />
+    <Compile Include="Platform\Views\TransparentScroller.designer.cs">
+      <DependentUpon>TransparentScroller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Content\Documents\Pages\Blocks\BaseBlockTableCellView.cs" />
+    <Compile Include="Platform\Utils\AppKitExtensions.cs" />
+    <Compile Include="Platform\Utils\NSWrapper.cs" />
+    <Compile Include="Platform\Views\HorizontallyGrowingTextField.cs" />
+    <Compile Include="Views\Content\Documents\Pages\PageTableClipView.cs" />
+    <Compile Include="Views\Content\Documents\Pages\PageTableView.cs" />
+    <Compile Include="Views\Content\DataType.cs" />
+    <Compile Include="Views\Content\Documents\Pages\Blocks\Elements\BlockHandle.cs" />
+    <Compile Include="Views\Content\Documents\Pages\Blocks\Elements\BlockOverlay.cs" />
+    <Compile Include="Views\Content\Documents\Pages\Blocks\Elements\TextBlockTextView.cs" />
+    <Compile Include="Views\Content\Documents\Blocks\BlockPasteboardItem.cs" />
+    <Compile Include="Views\MainWindow\Sidebar\SidebarOutlineView.cs" />
+    <Compile Include="Views\MainWindow\Sidebar\SidebarView.cs" />
+    <Compile Include="Views\MainWindow\Sidebar\SidebarView.designer.cs">
+      <DependentUpon>SidebarView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow\Sidebar\SidebarOutlineRowView.cs" />
+    <Compile Include="Views\Settings\SettingsThemesView.cs" />
+    <Compile Include="Views\Settings\SettingsThemesView.designer.cs">
+      <DependentUpon>SettingsThemesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MvvmCross\Bindings\NSPopUpButtonSelectedItemTargetBinding.cs" />
+    <Compile Include="Basics\LinkerPleaseInclude.cs" />
+    <Compile Include="MvvmCross\Bindings\NSComboBoxStringValueTargetBinding.cs" />
+    <Compile Include="Platform\Services\Documents\Markdown\MacMarkdownService.cs" />
+    <Compile Include="Platform\Services\Documents\Markdown\Renderers\CodeBlockRenderer.cs" />
+    <Compile Include="Platform\Services\Documents\Markdown\Renderers\HeadingRenderer.cs" />
+    <Compile Include="Platform\Services\Documents\Markdown\Renderers\ListRenderer.cs" />
+    <Compile Include="Platform\Services\Documents\Markdown\Renderers\ParagraphRenderer.cs" />
+    <Compile Include="Platform\Services\Documents\Markdown\Renderers\QuoteBlockRenderer.cs" />
+    <Compile Include="Platform\Services\Documents\Markdown\Renderers\Inlines\AutolinkInlineRenderer.cs" />
+    <Compile Include="Platform\Services\Documents\Markdown\Renderers\Inlines\CodeInlineRenderer.cs" />
+    <Compile Include="Platform\Services\Documents\Markdown\Renderers\Inlines\DelimiterInlineRenderer.cs" />
+    <Compile Include="Platform\Services\Documents\Markdown\Renderers\Inlines\EmphasisInlineRenderer.cs" />
+    <Compile Include="Platform\Services\Documents\Markdown\Renderers\Inlines\LinkInlineRenderer.cs" />
+    <Compile Include="Platform\Services\Documents\Markdown\Renderers\StringAttributeObjectRenderer.cs" />
+    <Compile Include="Platform\Services\Documents\Markdown\Renderers\ThematicBreakRenderer.cs" />
+    <Compile Include="Platform\Services\Documents\Markdown\StringAttributeResources.cs" />
+    <Compile Include="Platform\Services\Documents\Markdown\StringAttributeRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{D4405C50-DF00-4A7D-B050-B6111F2AFB26}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Views\MainMenu.xib" />
+    <InterfaceDefinition Include="Views\Windows.storyboard" />
+    <InterfaceDefinition Include="Views\MainWindow\PaneView.xib" />
+    <InterfaceDefinition Include="Views\MainWindow\RootView.xib" />
+    <InterfaceDefinition Include="Views\Settings\SettingsView.xib" />
+    <InterfaceDefinition Include="Views\Settings\SettingsGeneralView.xib" />
+    <InterfaceDefinition Include="Views\MainWindow\SingleTabView.xib" />
+    <InterfaceDefinition Include="Views\MainWindow\DetailView.xib" />
+    <InterfaceDefinition Include="Views\Content\Documents\Pages\PageView.xib" />
+    <InterfaceDefinition Include="Views\Content\Documents\Pages\Blocks\TextBlockTableCellView.xib" />
+    <InterfaceDefinition Include="Views\MainWindow\Sidebar\SidebarView.xib" />
+    <InterfaceDefinition Include="Views\Settings\SettingsThemesView.xib" />
+    <InterfaceDefinition Include="Views\Settings\SettingsTextView.xib" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
+</Project>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root-->
+        <scene sceneID="1I1-TL-8NZ">
+            <objects>
+                <windowController storyboardIdentifier="RootWindowCtrl" id="rcs-cE-DOc" userLabel="Root" sceneMemberID="viewController">
+                    <window key="window" separatorStyle="line" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" frameAutosaveName="RootWindow" animationBehavior="default" tabbingMode="disallowed" titleVisibility="hidden" id="B8o-PU-s3b" userLabel="Root">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES" fullSizeContentView="YES"/>
+                        <rect key="contentRect" x="334" y="165" width="1080" height="720"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <value key="minSize" type="size" width="350" height="480"/>
+                        <view key="contentView" id="DnG-FE-79f">
+                            <rect key="frame" x="0.0" y="0.0" width="1080" height="720"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <toolbar key="toolbar" implicitIdentifier="C431319D-0F15-47FD-B358-C122434A4CEC" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="aH1-9E-sfN">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="CBE6B7F5-D3FA-4138-A2BF-EB06E0324B90" explicitItemIdentifier="NSToolbarSidebarTrackingSeparatorItemIdentifier" label="Sidebar separator" paletteLabel="Sidebar separator" tag="-1" bordered="YES" id="2iE-KY-rfq" userLabel="Sidebar separator">
+                                    <size key="minSize" width="12" height="25"/>
+                                    <size key="maxSize" width="12" height="25"/>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="2iE-KY-rfq"/>
+                            </defaultToolbarItems>
+                        </toolbar>
+                        <connections>
+                            <outlet property="delegate" destination="rcs-cE-DOc" id="nDS-oh-Phg"/>
+                        </connections>
+                    </window>
+                </windowController>
+                <customObject id="SEN-0j-Rqi" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-302" y="66"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="iy4-fJ-ThQ">
+            <objects>
+                <windowController storyboardIdentifier="SettingsWindowCtrl" id="K5M-yf-QVE" userLabel="Settings" sceneMemberID="viewController">
+                    <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" tabbingMode="disallowed" toolbarStyle="preference" id="SJT-Q0-YhT" userLabel="Settings">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
+                        <rect key="contentRect" x="640" y="320" width="500" height="200"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1055"/>
+                        <view key="contentView" id="tzM-bd-M0S">
+                            <rect key="frame" x="0.0" y="0.0" width="500" height="200"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <toolbar key="toolbar" implicitIdentifier="FBC1C5D0-8651-458D-BB63-72E5F2FA641B" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="a1X-Ap-Eht">
+                            <allowedToolbarItems/>
+                            <defaultToolbarItems/>
+                        </toolbar>
+                        <connections>
+                            <outlet property="delegate" destination="K5M-yf-QVE" id="Lia-5K-iDi"/>
+                        </connections>
+                    </window>
+                </windowController>
+                <customObject id="Ya1-X7-Kbp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-595" y="802"/>
+        </scene>
+    </scenes>
+</document>

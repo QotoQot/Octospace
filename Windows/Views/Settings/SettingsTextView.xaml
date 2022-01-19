@@ -1,0 +1,100 @@
+﻿<views:SettingsTextViewAbstract xmlns:views="using:Win.Views.Settings"
+    x:Class="Win.Views.Settings.SettingsTextView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Win.Views.Settings"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mvx="using:MvvmCross.Platforms.Uap.Binding"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d">
+
+    <views:SettingsTextViewAbstract.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="SettingsStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </views:SettingsTextViewAbstract.Resources>
+    
+    <ScrollViewer Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" VerticalScrollBarVisibility="Auto">
+        <ContentControl>
+            <StackPanel MaxWidth="{StaticResource SettingsStackPanelMaxWidth}">
+                <StackPanel Style="{StaticResource SettingsSectionStackPanelStyle}">
+                    <TextBlock mvx:Bi.nd="Text FontHeader"
+                               Style="{StaticResource SettingsSubtitleTextBlockStyle}"/>
+                    <ComboBox Width="{StaticResource SettingsComboBoxWidth}"
+                              mvx:Bi.nd="ItemsSource FontNames;
+                                         SelectedIndex SelectedFontIndex, Mode=TwoWay"/>
+                    <CheckBox mvx:Bi.nd="Content UseSemiboldLabel;
+                                         IsChecked UseSemibold"/>
+                </StackPanel>
+
+                <StackPanel Style="{StaticResource SettingsSectionStackPanelStyle}">
+                    <TextBlock mvx:Bi.nd="Text PagesHeader"
+                               Style="{StaticResource SettingsSubtitleTextBlockStyle}"/>
+                    <ComboBox IsEditable="True"
+                              Width="{StaticResource SettingsSmallComboBoxWidth}"
+                              mvx:Bi.nd="Header PageFontSizeLabel;
+                                         SelectedItem PageFontSize, Mode=TwoWay">
+                        <x:String>12</x:String>
+                        <x:String>13</x:String>
+                        <x:String>14</x:String>
+                        <x:String>15</x:String>
+                        <x:String>16</x:String>
+                    </ComboBox>
+                    <ComboBox IsEditable="True"
+                              Width="{StaticResource SettingsSmallComboBoxWidth}"
+                              mvx:Bi.nd="Header PageLineSpacingLabel;
+                                         SelectedItem PageLineSpacing, Mode=TwoWay">
+                        <x:String>1.2</x:String>
+                        <x:String>1.3</x:String>
+                        <x:String>1.4</x:String>
+                        <x:String>1.5</x:String>
+                        <x:String>1.6</x:String>
+                    </ComboBox>
+                    <ComboBox Width="{StaticResource SettingsComboBoxWidth}"
+                              mvx:Bi.nd="Header PageLineWidthLabel;
+                                         ItemsSource PageLineWidthNames;
+                                         SelectedIndex SelectedPageLineWidthIndex, Mode=TwoWay"/>
+                </StackPanel>
+
+                <StackPanel Style="{StaticResource SettingsSectionStackPanelStyle}">
+                    <TextBlock mvx:Bi.nd="Text SpacesHeader"
+                               Style="{StaticResource SettingsSubtitleTextBlockStyle}"/>
+                    <ComboBox IsEditable="True"
+                              Width="{StaticResource SettingsSmallComboBoxWidth}"
+                              mvx:Bi.nd="Header SpaceFontSizeLabel;
+                                         SelectedItem SpaceFontSize, Mode=TwoWay">
+                        <x:String>12</x:String>
+                        <x:String>13</x:String>
+                        <x:String>14</x:String>
+                        <x:String>15</x:String>
+                        <x:String>16</x:String>
+                    </ComboBox>
+                    <ComboBox IsEditable="True"
+                              Width="{StaticResource SettingsSmallComboBoxWidth}"
+                              mvx:Bi.nd="Header SpaceLineSpacingLabel;
+                                         SelectedItem SpaceLineSpacing, Mode=TwoWay">
+                        <x:String>1.2</x:String>
+                        <x:String>1.3</x:String>
+                        <x:String>1.4</x:String>
+                        <x:String>1.5</x:String>
+                        <x:String>1.6</x:String>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Style="{StaticResource SettingsSectionStackPanelStyle}">
+                    <TextBlock mvx:Bi.nd="Text EditingHeader" Style="{StaticResource SettingsSubtitleTextBlockStyle}"/>
+                    <CheckBox mvx:Bi.nd="Content CheckOrthographyLabel;
+                                         IsChecked CheckOrthography"/>
+                    <CheckBox mvx:Bi.nd="Content FetchLinkTitlesLabel;
+                                         IsChecked FetchLinkTitles"/>
+                    <CheckBox mvx:Bi.nd="Content InsertClosingBracketsLabel;
+                                         IsChecked InsertClosingBrackets"/>
+                </StackPanel>
+
+            </StackPanel>
+        </ContentControl>
+    </ScrollViewer>
+</views:SettingsTextViewAbstract>

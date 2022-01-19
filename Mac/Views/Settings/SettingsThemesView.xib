@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SettingsThemesView">
+            <connections>
+                <outlet property="ColorModeLabel" destination="3G1-aQ-spm" id="YFy-0U-9R0"/>
+                <outlet property="ColorModePopup" destination="2pJ-FE-rOY" id="8Nf-VR-vvs"/>
+                <outlet property="ContentThemesFollowAppThemesBtn" destination="htc-oT-ZKv" id="pAe-ih-dLB"/>
+                <outlet property="Tabs" destination="m73-bn-iQU" id="cfB-Rd-9bT"/>
+                <outlet property="view" destination="4" id="vYq-9U-eIu"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="4">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="452"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <tabView initialItem="IiL-kU-Zeb" translatesAutoresizingMaskIntoConstraints="NO" id="m73-bn-iQU">
+                    <rect key="frame" x="13" y="70" width="474" height="376"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="360" id="cq6-Ty-pkh"/>
+                    </constraints>
+                    <font key="font" metaFont="system"/>
+                    <tabViewItems>
+                        <tabViewItem label="Pages" identifier="" id="IiL-kU-Zeb">
+                            <view key="view" id="AjE-u1-H69">
+                                <rect key="frame" x="10" y="33" width="454" height="330"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                        </tabViewItem>
+                        <tabViewItem label="Spaces" identifier="" id="P3Z-JU-Mir">
+                            <view key="view" id="ViS-az-uUZ">
+                                <rect key="frame" x="10" y="33" width="454" height="330"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                        </tabViewItem>
+                    </tabViewItems>
+                </tabView>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="htc-oT-ZKv">
+                    <rect key="frame" x="116" y="19" width="267" height="18"/>
+                    <buttonCell key="cell" type="check" title="Separate themes for dark &amp; light modes" bezelStyle="regularSquare" imagePosition="left" inset="2" id="K70-EN-VPb">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3G1-aQ-spm">
+                    <rect key="frame" x="148" y="46" width="78" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Color mode:" id="YSO-5v-58C">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2pJ-FE-rOY" userLabel="App theme popup">
+                    <rect key="frame" x="229" y="40" width="86" height="25"/>
+                    <popUpButtonCell key="cell" type="push" title="&lt;none&gt;" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="1nR-sH-akK" id="fNu-lU-ABU" userLabel="App theme popup">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="v4u-ax-khB">
+                            <items>
+                                <menuItem title="&lt;none&gt;" state="on" id="1nR-sH-akK"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                </popUpButton>
+            </subviews>
+            <constraints>
+                <constraint firstItem="2pJ-FE-rOY" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="232" id="2CL-sS-aRC"/>
+                <constraint firstItem="htc-oT-ZKv" firstAttribute="top" secondItem="2pJ-FE-rOY" secondAttribute="bottom" constant="8" symbolic="YES" id="DbT-EW-vPq"/>
+                <constraint firstItem="2pJ-FE-rOY" firstAttribute="leading" secondItem="3G1-aQ-spm" secondAttribute="trailing" constant="8" symbolic="YES" id="Eti-ON-wF2"/>
+                <constraint firstItem="2pJ-FE-rOY" firstAttribute="top" secondItem="m73-bn-iQU" secondAttribute="bottom" constant="16" id="Gi7-fw-V9v"/>
+                <constraint firstAttribute="bottom" secondItem="htc-oT-ZKv" secondAttribute="bottom" constant="20" symbolic="YES" id="OHh-Y4-5GT"/>
+                <constraint firstItem="htc-oT-ZKv" firstAttribute="centerX" secondItem="4" secondAttribute="centerX" id="XSa-V6-BPU"/>
+                <constraint firstItem="m73-bn-iQU" firstAttribute="top" secondItem="4" secondAttribute="top" constant="12" symbolic="YES" id="jwj-Mn-wi7"/>
+                <constraint firstAttribute="trailing" secondItem="m73-bn-iQU" secondAttribute="trailing" constant="20" symbolic="YES" id="nQL-H0-LPL"/>
+                <constraint firstItem="3G1-aQ-spm" firstAttribute="centerY" secondItem="2pJ-FE-rOY" secondAttribute="centerY" id="wHb-pw-mmD"/>
+                <constraint firstItem="m73-bn-iQU" firstAttribute="leading" secondItem="4" secondAttribute="leading" constant="20" symbolic="YES" id="y49-m2-bqO"/>
+            </constraints>
+            <point key="canvasLocation" x="59" y="155"/>
+        </customView>
+    </objects>
+</document>
